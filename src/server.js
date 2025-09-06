@@ -3,6 +3,11 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 dotenv.config();
 
+import bookingsRoutes from "./src/routes/bookings.js";
+
+app.use("/api/bookings", bookingsRoutes);
+
+
 const bookingsRouter = require("./routes/bookings");
 const contactsRouter = require("./routes/contacts");
 const servicesRouter = require("./routes/services");
